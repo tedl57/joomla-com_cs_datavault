@@ -4,7 +4,13 @@
         <field name="dvparam1" filter="safehtml" type="text" label="COM_CS_DATAVAULT_FORM_LBL_DVPARAM1" description="COM_CS_DATAVAULT_FORM_DESC_DVPARAM1" hint="COM_CS_DATAVAULT_FORM_LBL_DVPARAM1"/>
 
     </fieldset>
-
+    <fieldset name="email_templates" description="Defines the format of email sent out by this component" label="Email Templates">
+    	<field name="forums_summary_from_name" type="text" default="" label="Forums Summary From Name" description="Name on From line format for the forums summary email sent out (optional)" hint="Optional name and title"/>
+    	<field name="forums_summary_from_addr" type="text" default="email@domain.com" label="Forums Summary From Address" description="Email Address on From line format for the forums summary email sent out" hint="forums summary from line address hint"/>
+    	<field name="forums_summary_subject" type="text" default="Forums Summary" label="Forums Summary Subject" description="Subject line format for the forums summary email sent out" hint="forums summary line hint"/>
+    	<field name="forums_summary_body" type="textarea" default="Dear Group..." label="Forums Summary Body" description="Body format for the forums summary email sent out" hint="forums summary body hint"/>
+  		<field name="forums_summary_to_addr" type="text" default="" label="Forums Summary To Address" description="Email Address on To line format for the forums summary email sent out" hint="forums summary to line address hint"/>
+	</fieldset>  
     <fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
         <field name="rules" type="rules" component="com_cs_datavault" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
 	</fieldset>
